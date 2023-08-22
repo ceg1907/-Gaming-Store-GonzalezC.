@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Store</title>
+    <link rel="shortcut icon" href="../multimedia/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- apertura header -->
+    <header class="container-fluid">
+        <div class="row">
+            <div class="flex-header col-12 d-flex">
+                <div>
+                    <a class="inicio-link col-4" href="../index.html"><img class="icon-interact"
+                            src="../multimedia/icons/favicon.png"></a>
+                </div>
+                <div class="buscador col-6">
+                    <form action method="get"></form>
+                    <input type="text" name="buscardor" placeholder="buscar" class="buscador-text" />
+                    <select name="categorias" class="categorias1">
+                        <option value="categorias">categorías</option>
+                        <option value="procesadores">procesadores</option>
+                        <option value="gráficas">gráficas</option>
+                        <option value="perifericos">periféricos</option>
+                    </select>
+                </div>
+                <div class="position-user col-2">
+                    <i class="fa-solid fa-basket-shopping fa-xl"></i>
+                    <i class="fa-solid fa-user fa-xl"></i>
+                </div>
+            </div>
+        </div>
+        <!-- apertura barra nav -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="bar container-fluid d-flex justify-content-end p-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-desplegable" aria-controls="menu-desplegable" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu-desplegable">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cotizacion.html">cotización</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- cierre barra nav -->
+    </header>
+    <!-- cierre header -->
+    <main class="background-nosotros">
+        <div class="container-fluid">
+            <div class="row d-flex justify-content-center position-box">
+                <section class="d-flex flex-column col-sm-12 col-md-6">
+                    <h2>Nuestra empresa</h2>
+                    <p>
+                        Somos una tienda dedicada a la venta de notebooks, computadoras, hardware y productos
+                        periféricos para clientes desde el ámbito particular hasta el sector corporativo y
+                        emprendimientos del rubro tecnológico. Nos especializamos en la comercialización de tecnología
+                        de las más destacadas marcas del mercado, garantizando responsabilidad y brindando confianza a
+                        nuestros usuarios.<br>En Gaming Store nos distinguimos por otorgar una atención personalizada y
+                        un asesoramiento
+                        completo a nuestros clientes para que realicen una compra acorde a sus necesidades.
+                    </p>
+                </section>
+            </div>
+
+        </div>
+    </main>
+    <footer class="container-fluid">
+        <!-- apertura de footer -->
+        <div class="row content-footer d-flex">
+            <div class="footer-redes col-sm-4">
+                <h3>Redes</h3>
+                <div>
+                    <a href="https://www.instagram.com"><i class="icons fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com"><i class="icons fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com"><i class="icons fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com"><i class="icons fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-metodos col-md-3">
+                <h3 class="sub2">Metodos de pago</h3>
+                <div>
+                    <i class="pago fa-brands fa-cc-visa"></i>
+                    <i class="pago fa-brands fa-cc-mastercard"></i>
+                    <i class="pago fa-brands fa-cc-amex"></i>
+                </div>
+            </div>
+            <div class="footer-links col-sm-3">
+                <h3>Links de interés</h3>
+                <ul type="none" class="links">
+                    <li>Ayuda</li>
+                    <li>Trabaja con nosotros</li>
+                    <li><a href="./pages/contacto.html">contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- cierre de footer -->
+    </footer>
+    <!-- Bootstrap scrips -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap scrips -->
+</body>
+
+</html>

@@ -276,7 +276,12 @@ main {
 }
 
 .img-home {
+    line-height: 75%;
+}
+
+.c-b {
     height: 75%;
+    background-color: white;
 }
 
 .align-product p {
@@ -351,8 +356,11 @@ main {
     transition: 0.5s;
 }
 
-.css-pag a:visited {
+.css-pag .activado {
     background-color: #333851;
+}
+
+.css-pag a:visited {
     color: whitesmoke;
     border-color: rgb(39, 38, 38);
 }
@@ -360,6 +368,7 @@ main {
 .css-pag a:focus {
     box-shadow: none;
     transform: scale(1.09);
+    background-color: #333851;
 }
 
 .css-pag span:hover,

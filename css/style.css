@@ -523,7 +523,6 @@ main {
 /* Personalizacion del HTML NOSOTROS */
 
 .background-nosotros {
-    /* height: 100vh; */
     background-image: url(../multimedia/bakgrounds/bakground-nosotros.png);
     background-size: cover;
 }
@@ -543,6 +542,7 @@ main {
 
 .position-box {
     align-content: center;
+    height: 760px;
 }
 
 .position-box h2 {
@@ -801,6 +801,12 @@ footer li:hover,
 
     .align-product {
         height: 310px;
+    }
+
+    /* Contenido principal NOSOTROS */
+
+    .position-box {
+        height: 800px;
     }
 
     /* Contenido principal  CONTACTO */

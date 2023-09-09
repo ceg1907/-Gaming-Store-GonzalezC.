@@ -1,0 +1,877 @@
+@import "./medias-queries.scss";
+// =================================== VARIABLES ===================================
+
+// Backgrounds y borders
+$color1: #252b47;
+$color2: #83899d;
+$color3: #151b38;
+$color4: #151b38cc;
+$color5: #545a72;
+$color6: #333851;
+$color7: #454e6c;
+$color8: #e0e2e7;
+$color9: white;
+
+// Backgrounds blur
+$blur: rgba(0, 0, 0, 0.2);
+
+
+// Fonts color
+$font-color1: whitesmoke;
+$font-color2: black;
+$font-color3: #272626;
+$font-color4: #111213;
+$font-color5: #212529;
+
+// Fonts
+$font1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font2: 'Bai Jamjuree', sans-serif;
+
+// Shadows
+$box-shadows: rgba(0, 0, 0, 0.5);
+$box-shadows1:  0 2px 5px rgba(0, 0, 0, 0.5);
+$box-shadows2:  0 2px 5px black;
+
+// Transiciones
+$transicion1: 0.5s;
+$transicion2: 1s;
+$transicion3: 0.7s;
+$transicion4: 0.3s;
+
+// =================================== FIN VARIABLES ===================================
+
+// Selector universal
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    box-sizing: border-box;
+}
+
+// =================================== INICIO personalización del HEADER ===================================
+
+header {
+    background-color: $color1;
+    padding: 10px 0 0 0;
+
+    .flex-header {
+        justify-content: space-between;
+        align-items: center;
+
+        .icon-interact {
+            height: 70px;
+            transition: $transicion2;
+            @include tablet{
+                height: 100px
+            }
+            @include pc{
+                height: 150px;
+            }
+        }
+
+        .icon-interact:hover {
+            transform: rotate(360deg);
+        }
+
+        .icon-interact:active {
+            transform: scale(1.09);
+        }
+
+        .buscador {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            .buscador-text {
+                width: 125px;
+                height: 30px;
+                border: 3px;
+                border-style: solid;
+                border-color: $color3;
+                text-indent: 30px;
+                text-transform: capitalize;
+                font-family: $font1;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                font-size: 15px;
+                background: $color8 url(../multimedia/icons//buscador.png) no-repeat 5px center;
+                outline: none;
+                transition: $transicion4;
+                @include tablet{
+                    width: 200px;
+                    height: 35px;
+                }
+                @include pc{
+                    font-size: 20px;
+                    width: 260px;
+                    height: 35px;
+                }
+            }
+
+            .buscador-text:hover {
+                box-shadow: inset 0 5px 10px $box-shadows;
+            }
+
+            .buscador-text:focus {
+                box-shadow: inset 0 10px 10px $box-shadows;
+            }
+
+            .categorias1 {
+                width: 20px;
+                height: 30px;
+                text-align: center;
+                text-indent: 2px;
+                text-transform: capitalize;
+                font-size: 20px;
+                font-family: $font1;
+                color: $font-color1;
+                background-color: $color6;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border: $color3 solid 3px;
+                outline: none;
+                @include tablet{
+                    height: 35px;
+                }
+                @include pc{
+                    font-size: 15px;
+                    width: 100px;
+                    height: 35px;
+                }
+                option {
+                    font-size: 11px;
+                    font-family: $font1;
+                    @include tablet{
+                        font-size: 12px;
+                    }
+                    @include pc{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .position-user {
+            display: flex;
+            justify-content: center;
+            .fa-xl {
+                color: $font-color1;
+                font-size: 15px;
+                text-align: center;
+                line-height: 20PX;
+                height: 20px;
+                width: 20px;
+                margin: 5PX;
+                transition: $transicion1;
+                @include tablet{
+                    font-size: 20px;
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                }
+                @include pc{
+                    font-size: 25px;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                }
+            }
+            .fa-xl:hover {
+                box-shadow: $box-shadows;
+                border-radius: 5px;
+                background-color: $color2;
+                cursor: pointer;
+                @include pc{
+                    border-radius: 10px;
+                    }
+                }
+            }
+            .fa-xl:active {
+                color: $font-color2;
+            }
+        }
+
+    // -INICIO Barra de navegación-
+    .navbar {
+        height: 50px;
+        padding: 10px 0 0 0;
+        @include tablet{
+            height: 50px;
+        }
+        @include pc{
+            height: 60px;
+        }
+        .bar {
+            height: 40px;
+            z-index: 1;
+            @include tablet{
+                height: 40px;
+            }
+            button {
+                height: 40px;
+                width: 40px;
+                padding: 0;
+                transition: $transicion1;
+                backdrop-filter: blur(5px);
+                @include tablet{
+                    height: 40px;
+                    width: 40px;
+                }
+                i {
+                    color: $font-color1;
+                    line-height: 30px;
+                    margin: 0;
+                    text-align: center;
+                    @include tablet{
+                        font-size: 25px;
+                    }
+                }
+            }
+            button:hover {
+                transition: $transicion2;
+                transform: scale(1.09);
+                box-shadow: $box-shadows1;
+                background-color: $color4;
+                border-radius: 5px;
+                border: none;
+            }
+            .navbar-collapse {
+                padding-right: 5px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: $color4;
+                @include pc{
+                    background-color: transparent;
+                }
+                ul {
+                    text-align: right;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    @include pc{
+                        font-size: 17px;
+                        height: 50px;
+                        align-items: center;
+                        background-color: $color3;
+                    }
+                }
+                li {
+                    transition: $transicion3;
+                    a {
+                        text-decoration: none;
+                        color: $font-color1;
+                        padding: 10px;
+                        transition: $transicion2;
+                    }
+                    a:hover {
+                        color: $font-color1;
+                    }
+                    a:active {
+                        color: $font-color2;
+                    }
+                }
+                li:hover {
+                    transform: scale(1.05);
+                    box-shadow: $box-shadows2;
+                    background-color: $color2;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+// -FIN Barra de navegación-
+
+
+
+// =================================== FIN personalización del HEADER ===================================
+
+
+// =================================== INICIO personalización del MAIN ===================================
+
+main {
+    padding: 10px 0 10px 0;
+    background-color: $color2;
+}
+
+// HOME
+
+.flex-home {
+    display: flex;
+    flex-direction: column;
+    .subtitulo {
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        padding: 5px;
+        margin: 5px;
+        @include tablet{
+            font-size: 22px;
+        }
+        @include pc{
+            font-size: 25px;
+        }
+    }
+    .product1,
+    .product2 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+}
+
+// -INICIO CARDS del HOME y PRODUCTOS-
+
+.align-product {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 5px;
+    text-align: center;
+    transition: $transicion1;
+    background-color: #9398AA;
+    color: $font-color2;
+    @include tablet{
+        height: 310px;
+    }
+    @include pc{
+        width: 210px;
+        height: 350px;
+    }
+    .c-b {
+        height: 75%;
+        background-color: white;
+        .img-home {
+            line-height: 75%;
+        }
+    }
+    .card-body {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-bottom: 0px;
+        @include pc{
+            padding-bottom: 16px;
+        }
+        .nombre {
+            font-size: 12px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            @include pc{
+                font-size: 14px;
+            }
+        }
+        .precio {
+            font-size: 17px;
+            align-items: center;
+            justify-content: end;
+            font-weight: bold;
+            @include pc{
+                font-size: 18px;
+            }
+            p {
+                margin-bottom: 0px;
+            }
+            .carrito-agregar {
+                margin: 3px;
+                text-align: center;
+                .fa-cart-arrow-down {
+                    font-size: 13px;
+                    color: $font-color3;
+                    margin: 7px;
+                    transition: $transicion1;
+                    @include tablet{
+                        width: 20px;
+                        height: 20px;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    @include pc{
+                        width: 20px;
+                        height: 20px;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+                i:active{
+                    color: $font-color1;
+                }
+            }
+            .carrito-agregar:hover {
+                box-shadow: $box-shadows1;
+                border-radius: 10px;
+            }
+        }
+    }
+    .card-body p:active{
+        color: #e57c23;
+    }
+}
+.align-product:hover {
+    box-shadow: $box-shadows2;
+    background-color: $color5;
+    border-radius: 10px;
+    transform: scale(0.9);
+    color: $font-color1;
+}
+
+// -FIN CARDS del HOME y PRODUCTOS-
+
+// PRODUCTOS
+.filtrado {
+    padding: 10px;
+    border-bottom: 2px solid $font-color1;
+    box-shadow: $box-shadows1;
+    .filtrado-categorias {
+        height: 20px;
+        width: 115px;
+        font-size: 10px;
+        text-indent: 5px;
+        border-radius: 10px;
+        font-family: $font1;
+        color: $font-color1;
+        background-color: $color6;
+        outline: none;
+        @include tablet{
+            height: 25px;
+            width: 140px;
+            font-size: 12px;
+        }
+        option {
+            font-family: $font1;
+        }
+        @include pc{
+            width: 170px;
+            height: 30px;
+            font-size: 15px;
+        }
+    }
+    .alineacion-list {
+        height: 30px;
+        width: 30px;
+        line-height: 18px;
+        border: 2px solid $font-color3;
+        font-size: 16px;
+        margin: 0;
+        padding: 5px;
+        color: $font-color1;
+        @include pc{
+            height: 35px;
+            width: 35px;
+            font-size: 20px;
+            line-height: 22px
+        }
+    }
+}
+
+.position-article {
+    flex-wrap: wrap;
+    padding: 15px 0;
+    @include pc{
+        padding: 15px 25px;
+        margin: 0 15px;
+        border-left: 2px solid $font-color1;
+        border-right: 2px solid $font-color1;
+    }
+}
+
+
+// Paginación
+.css-pag {
+    padding: 5px;
+    margin: 16px 0;
+    .activado {
+        background-color: $color6;
+    }
+    span,
+    a {
+        background-color: transparent;
+        border-color: #2b3035;
+        color: #272626;
+        transition: $transicion1;
+    }
+    a:visited {
+        color: $font-color1;
+        border-color: $font-color3;
+    }
+    a:focus {
+        box-shadow: none;
+        transform: scale(1.09);
+        background-color: $color6;
+    }
+    span:hover,
+    a:hover {
+        transform: scale(1.05);
+        background-color: $color6;
+        color: $font-color1;
+        border-color: $color3;
+        box-shadow: 2px 3px 5px $box-shadows;
+    }
+    a:active {
+        transform: scale(1.09) !important;
+        color: $font-color1;
+        box-shadow: 2px 3px 5px $box-shadows;
+    }
+    a:focus {
+        transform: scale(1.05);
+    }
+}
+// COTIZACIÓN
+.background {
+    background-image: url(../multimedia/bakgrounds/backgraund-black.png);
+    background-size: cover;
+    .posicion-cotizacion {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        .alineacion {
+            justify-content: end;
+            @include pc{
+                height: 650px;
+                margin: 15px 0;
+            }
+            .info-alineacion {
+                display: flex;
+                align-items: center;
+                .info-cotizacion {
+                    color: $font-color1;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px;
+                    margin: 5px;
+                    align-items: center;
+                    border: 1px solid $box-shadows;
+                    border-radius: 10px;
+                    box-shadow: $box-shadows1;
+                    background-color: $blur;
+                    backdrop-filter: blur(5px);
+                    font-style: italic;
+                    h1 {
+                        font-weight: bold;
+                        font-size: 20px;
+                        margin: 10px;
+                    }
+                    p {
+                        font-size: 15px;
+                        span {
+                        font-weight: bold;
+                        }
+                    }
+                }
+                @include pc{
+                    width: 500px;
+                }
+            }
+
+            .form-position {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                padding: 15px 10px;
+                .background-forms {
+                    padding: 15px 30px 20px 30px;
+                    border-radius: 20px;
+                    box-shadow: $box-shadows2;
+                    background-color: $color4;
+                    text-align: center;
+                    width: 290px;
+                    @include pc{
+                        width: 350px;
+                    }
+                    h2 {
+                        color: $font-color1;
+                        font-size: 22px;
+                        padding: 10px;
+                        margin: 10px;
+                    }
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        input,
+                        textarea,
+                        button {
+                            font-family: $font1;
+                            font-size: 13px;
+                            margin: 10px 0;
+                        }
+                        textarea,
+                        input {
+                            border: solid $color7;
+                            background-color: $color8;
+                            text-indent: 5px;
+                            border-radius: 5px;
+                            outline: none;
+                            transition: $transicion4;
+                        }
+                        input {
+                            height: 35px;
+                            @include pc{
+                                height: 40px;
+                            }
+                        }
+                        button {
+                            box-shadow: 2px 5px 10px $box-shadows;
+                            background-color: #151b3880;
+                            border: 2px solid $color7;
+                            border-radius: 10px;
+                            color: $color9;
+                            width: 155px;
+                            height: 30px;
+                            transition: $transicion4;
+                        }
+                        input:hover,
+                        textarea:hover {
+                            box-shadow: inset 0 5px 10px $box-shadows;
+                            transform: scale(1.05);
+                            border: 2px solid $font-color2;
+                        }
+                        input:focus,
+                        textarea:focus {
+                        box-shadow: inset 0 10px 10px $box-shadows;
+                        }
+                        button:hover {
+                            transform: scale(1.03);
+                        }
+                        button:active {
+                            transform: scale(0.9);
+                            background-color: #020A1D;
+                            border-color: $font-color1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// NOSOTROS
+.background-nosotros {
+    background-image: url(../multimedia/bakgrounds/bakground-nosotros.png);
+    background-size: cover;
+    .position-box {
+        align-content: center;
+        height: 760px;
+        @include tablet{
+            height: 800px;
+        }
+        @include pc{
+            height: 800px;
+        }
+
+        section {
+            color: $font-color1;
+            padding: 5px;
+            margin: 5px;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            box-shadow: $box-shadows1;
+            background-color: $blur;
+            backdrop-filter: blur(5px);
+            font-style: italic;
+            @include pc{
+                height: 400px;
+                justify-content: center;
+            }
+            h2 {
+                font-size: 20px;
+                padding: 5px;
+                margin: 10px;
+                @include pc{
+                    font-size: 30px;
+                }
+            }
+            p {
+                font-size: 15px;
+                padding: 0 10px;
+                @include pc{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+// CONTACTO
+.background-contacto {
+    background-image: url(../multimedia/bakgrounds/backgraund-contacto.png);
+    background-size: cover;
+    .align-box{
+        @include pc{
+            height: 750px;
+            align-content: center;
+        }
+        .aling-contacto {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(245, 245, 245, 0.5);
+            border-radius: 10px;
+            box-shadow: inset $box-shadows2;
+            padding: 12px;
+            margin: 5px 0px;
+            background-color: $font-color1;
+            @include pc{
+                width: 350px;
+            }
+            h2 {
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 10px;
+                margin: 5px;
+                border-bottom: 2px solid $font-color2;
+            }
+            div section {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 10px;
+                i {
+                    font-size: 25px;
+                    color: #2b3035;
+                    transition: $transicion1;
+                    @include pc{
+                        font-size: 30px;
+                    }
+                }
+                .redes:hover {
+                    color:  $font-color2;
+                    border-radius: 5px;
+                    box-shadow: $box-shadows2;
+                    transform: scale(1.03);
+                }
+                p {
+                    margin: 0;
+                    font-size: 15px;
+                    font-style: italic;
+                    @include pc{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .telefono a {
+                color: $font-color2;
+                font-size: 15px;
+            }
+            .line {
+                display: flex;
+                flex-direction: column;
+                width: 50px;
+                height: 2px;
+                border: 1px solid rgba(0, 0, 0, 0.7);
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+            iframe {
+                display: flex;
+                height: 300px;
+                width: 250;
+                @include tablet{
+                    width: 240px;
+                }
+            }
+        }
+    }
+}
+// =================================== FIN personalización del MAIN ===================================
+// =================================== INICIO personalización del FOOTER ===================================
+footer {
+    padding: 10px 0;
+    background-color: $color7;
+    .content-footer {
+        justify-content: space-evenly;
+        .footer-redes,
+        .footer-metodos,
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer-redes div,
+        .footer-metodos div {
+        margin: 5px;
+        padding: 5px;
+        }
+        .footer-redes .icons {
+            font-size: 18px;
+            text-align: center;
+            padding: 5px;
+            color: $font-color2;
+            transition: $transicion1;
+            @include pc{
+                font-size: 22px;
+                margin: 5px;
+            }
+        }
+        .icons:hover {
+            color: $font-color1;
+            cursor: pointer;
+        }
+        .footer-metodos {
+            display: none;
+            @include pc{
+                display: flex;
+            }
+            .pago {
+                font-size: 25px;
+                padding: 5px;
+                margin: 5px;
+                color: $font-color2;
+            }
+        }
+        .footer-links .links {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            margin-bottom: 0;
+            li {
+                text-align: left;
+                padding: 3px;
+                font-size: 12px;
+                transition: $transicion1;
+                color: $font-color4;
+                font-weight: bold;
+                a {
+                    text-decoration: none;
+                    color: $font-color4;
+                }
+                a:hover{
+                    color: $font-color1;
+                    cursor: pointer;
+                }
+            }
+            li:hover{
+                color: $font-color1;
+                cursor: pointer;
+            }
+        }
+        h3 {
+            font-size: 17px;
+            text-align: center;
+            font-weight: bold;
+            color: $font-color4;
+        }
+    }
+}
+// =================================== FIN personalización del FOOTER ===================================
+
+/* Scrollbar */
+::-webkit-scrollbar {
+
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}

@@ -514,7 +514,7 @@ main {
         box-shadow: 2px 3px 5px $box-shadows;
     }
     a:active {
-        transform: scale(1.09) !important;
+        transform: scale(1.09);
         color: $font-color1;
         box-shadow: 2px 3px 5px $box-shadows;
     }

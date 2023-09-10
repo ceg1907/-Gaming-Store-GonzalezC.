@@ -15,16 +15,19 @@ header .flex-header {
 }
 header .flex-header .icon-interact {
   height: 70px;
+  width: 70px;
   transition: 1s;
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   header .flex-header .icon-interact {
     height: 100px;
+    width: 100px;
   }
 }
 @media only screen and (min-width: 1024px) {
   header .flex-header .icon-interact {
     height: 150px;
+    width: 150px;
   }
 }
 header .flex-header .icon-interact:hover {
@@ -506,7 +509,7 @@ main {
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 .css-pag a:active {
-  transform: scale(1.09) !important;
+  transform: scale(1.09);
   color: whitesmoke;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
@@ -515,7 +518,7 @@ main {
 }
 
 .background {
-  background-image: url(../multimedia/bakgrounds/backgraund-black.png);
+  background-image: url(../multimedia/bakgrounds/backgraund-black-MB.webp);
   background-size: cover;
 }
 .background .posicion-cotizacion {
@@ -651,7 +654,7 @@ main {
 }
 
 .background-nosotros {
-  background-image: url(../multimedia/bakgrounds/bakground-nosotros.png);
+  background-image: url(../multimedia/bakgrounds/bakground-nosotros-MB.webp);
   background-size: cover;
 }
 .background-nosotros .position-box {
@@ -707,7 +710,7 @@ main {
 }
 
 .background-contacto {
-  background-image: url(../multimedia/bakgrounds/backgraund-contacto.png);
+  background-image: url(../multimedia/bakgrounds/backgraund-contacto-MB.webp);
   background-size: cover;
 }
 @media only screen and (min-width: 1024px) {

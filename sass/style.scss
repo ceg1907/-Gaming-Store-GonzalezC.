@@ -60,12 +60,15 @@ header {
 
         .icon-interact {
             height: 70px;
+            width: 70px;
             transition: $transicion2;
             @include tablet{
-                height: 100px
+                height: 100px;
+                width: 100px;
             }
             @include pc{
                 height: 150px;
+                width: 150px
             }
         }
 
@@ -524,7 +527,7 @@ main {
 }
 // COTIZACIÓN
 .background {
-    background-image: url(../multimedia/bakgrounds/backgraund-black.png);
+    background-image: url(../multimedia/bakgrounds/backgraund-black-MB.webp);
     background-size: cover;
     .posicion-cotizacion {
         flex-wrap: wrap;
@@ -653,7 +656,7 @@ main {
 }
 // NOSOTROS
 .background-nosotros {
-    background-image: url(../multimedia/bakgrounds/bakground-nosotros.png);
+    background-image: url(../multimedia/bakgrounds/bakground-nosotros-MB.webp);
     background-size: cover;
     .position-box {
         align-content: center;
@@ -700,7 +703,7 @@ main {
 }
 // CONTACTO
 .background-contacto {
-    background-image: url(../multimedia/bakgrounds/backgraund-contacto.png);
+    background-image: url(../multimedia/bakgrounds/backgraund-contacto-MB.webp);
     background-size: cover;
     .align-box{
         @include pc{

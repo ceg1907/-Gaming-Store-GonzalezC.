@@ -1,0 +1,55 @@
+// ===== MIXIN GALERIA ======
+
+@mixin cuadrilla-pc{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 250px);
+}
+@mixin cuadrilla-tablet{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+@mixin item1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+@mixin item2{
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+@mixin item3{
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+@mixin item4{
+    grid-column: 4/5;
+    grid-row: 4/6;
+}
+@mixin item5{
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+@mixin item6{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+@mixin item7{
+    grid-column: 2/3;
+    grid-row: 2/5;
+}
+@mixin item8{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+@mixin item9{
+    grid-column: 1/2;
+    grid-row: 3/6;
+}
+@mixin item10{
+    grid-column: 2/4;
+    grid-row: 5/6;
+}
+@mixin item11{
+    grid-column: 3/4;
+    grid-row: 4/5;
+}

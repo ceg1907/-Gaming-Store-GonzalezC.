@@ -1,0 +1,251 @@
+@import "./variables";
+@import "./medias-queries";
+
+// Selector universal
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bai Jamjuree', sans-serif;
+    box-sizing: border-box;
+}
+// =================================== INICIO personalización del HEADER ===================================
+
+header {
+    background-color: $color1;
+    padding: 10px 0 0 0;
+
+    .flex-header {
+        justify-content: space-between;
+        align-items: center;
+
+        .icon-interact {
+            height: 70px;
+            width: 70px;
+            transition: $transicion2;
+            @include tablet{
+                height: 100px;
+                width: 100px;
+            }
+            @include pc{
+                height: 150px;
+                width: 150px
+            }
+        }
+
+        .icon-interact:hover {
+            transform: rotate(360deg);
+        }
+
+        .icon-interact:active {
+            transform: scale(1.09);
+        }
+
+        .buscador {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            .buscador-text {
+                width: 125px;
+                height: 30px;
+                border: 3px;
+                border-style: solid;
+                border-color: $color3;
+                text-indent: 30px;
+                text-transform: capitalize;
+                font-family: $font1;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                font-size: 15px;
+                background: $color8 url(../multimedia/icons//buscador.png) no-repeat 5px center;
+                outline: none;
+                transition: $transicion4;
+                @include tablet{
+                    width: 200px;
+                    height: 35px;
+                }
+                @include pc{
+                    font-size: 20px;
+                    width: 260px;
+                    height: 35px;
+                }
+            }
+
+            .buscador-text:hover {
+                box-shadow: inset 0 5px 10px $box-shadows;
+            }
+
+            .buscador-text:focus {
+                box-shadow: inset 0 10px 10px $box-shadows;
+            }
+
+            .categorias1 {
+                width: 20px;
+                height: 30px;
+                text-align: center;
+                text-indent: 2px;
+                text-transform: capitalize;
+                font-size: 20px;
+                font-family: $font1;
+                color: $font-color1;
+                background-color: $color6;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border: $color3 solid 3px;
+                outline: none;
+                @include tablet{
+                    height: 35px;
+                }
+                @include pc{
+                    font-size: 15px;
+                    width: 100px;
+                    height: 35px;
+                }
+                option {
+                    font-size: 11px;
+                    font-family: $font1;
+                    @include tablet{
+                        font-size: 12px;
+                    }
+                    @include pc{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .position-user {
+            display: flex;
+            justify-content: center;
+            .fa-xl {
+                color: $font-color1;
+                font-size: 15px;
+                text-align: center;
+                line-height: 20PX;
+                height: 20px;
+                width: 20px;
+                margin: 5PX;
+                transition: $transicion1;
+                @include tablet{
+                    font-size: 20px;
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                }
+                @include pc{
+                    font-size: 25px;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                }
+            }
+            .fa-xl:hover {
+                box-shadow: $box-shadows;
+                border-radius: 5px;
+                background-color: $color2;
+                cursor: pointer;
+                @include pc{
+                    border-radius: 10px;
+                    }
+                }
+            }
+            .fa-xl:active {
+                color: $font-color2;
+            }
+        }
+
+    // -INICIO Barra de navegación-
+    .navbar {
+        height: 50px;
+        padding: 10px 0 0 0;
+        @include tablet{
+            height: 50px;
+        }
+        @include pc{
+            height: 60px;
+        }
+        .bar {
+            height: 40px;
+            z-index: 1;
+            @include tablet{
+                height: 40px;
+            }
+            button {
+                height: 40px;
+                width: 40px;
+                padding: 0;
+                transition: $transicion1;
+                backdrop-filter: blur(5px);
+                @include tablet{
+                    height: 40px;
+                    width: 40px;
+                }
+                i {
+                    color: $font-color1;
+                    line-height: 30px;
+                    margin: 0;
+                    text-align: center;
+                    @include tablet{
+                        font-size: 25px;
+                    }
+                }
+            }
+            button:hover {
+                transition: $transicion2;
+                transform: scale(1.09);
+                box-shadow: $box-shadows1;
+                background-color: $color4;
+                border-radius: 5px;
+                border: none;
+            }
+            .navbar-collapse {
+                padding-right: 5px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                background-color: $color4;
+                @include pc{
+                    background-color: transparent;
+                }
+                ul {
+                    text-align: right;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    font-weight: bold;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    @include pc{
+                        font-size: 17px;
+                        height: 50px;
+                        align-items: center;
+                        background-color: $color3;
+                    }
+                }
+                li {
+                    transition: $transicion3;
+                    a {
+                        text-decoration: none;
+                        color: $font-color1;
+                        padding: 10px;
+                        transition: $transicion2;
+                    }
+                    a:hover {
+                        color: $font-color1;
+                    }
+                    a:active {
+                        color: $font-color2;
+                    }
+                }
+                li:hover {
+                    transform: scale(1.05);
+                    box-shadow: $box-shadows2;
+                    background-color: $color2;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+// -FIN Barra de navegación-
+
+
+
+// =================================== FIN personalización del HEADER ===================================

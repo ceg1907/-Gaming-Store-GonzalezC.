@@ -91,7 +91,7 @@ function CargarProductosIndex1(){
             divCardsIndex1.classList.add("card", "align-product");
             divCardsIndex1.innerHTML = `
             <div class="c-b">
-                <img class="card-img-top img-home" src=".${articulo.imagen}" alt="${articulo.nombre}" />
+                <img class="card-img-top img-home" src="${articulo.imagen}" alt="${articulo.nombre}" />
             </div>
             <div class="card-body d-flex">
                 <p class="nombre-item">${articulo.nombre}</p>

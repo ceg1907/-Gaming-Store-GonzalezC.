@@ -36,7 +36,6 @@ fetch("../JavaScript/articulos.json")
     .then(data => {
         listaArticulos = data;
         CargarProductos(listaArticulos);
-        CargarProductosIndex1(listaArticulos);
     })
 fetch("../JavaScript/articulos.json")
     .then(response => response.json())

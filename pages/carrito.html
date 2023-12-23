@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="name" content="Gaming Store - Contactanos">
-    <meta name="description"
-        content="Si tiene alguna consulta estos son nuestros medios de contacto y donde nos encontramos.">
-    <meta name="keywords"
-        content="gaming-store-ubicacion, gaming-store-instagram, gaming-store-youtube, gaming-store-facebook, gaming-store-telefono, gaming-store-mail">
+    <meta name="name" content="Gaming Store | Productos - Hardware para PC">
+    <meta name="description" content="Productos de tecnologia y armados de pc  con envio a TODO EL PAIS.">
+    <meta name="keywords" content="mouse, teclado, monitor, computadora, graficas, procesadores, headset, auriculares">
     <title>Gaming Store</title>
     <link rel="shortcut icon" href="../multimedia/icons/favicon.webp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -19,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -34,15 +33,12 @@
                 <div class="buscador col-6">
                     <form action method="get"></form>
                     <input type="text" name="buscardor" placeholder="buscar" class="buscador-text" />
-                    <div class="">
-                        <select name="categorias" class="categorias1">
-                            <option value="categorias">categorias</option>
-                            <option value="procesadores">procesadores</option>
-                            <option value="gráficas">gráficas</option>
-                            <option value="perifericos">periféricos</option>
-                        </select>
-                    </div>
-
+                    <select name="categorias" class="categorias1">
+                        <option value="categorias">categorías</option>
+                        <option value="procesadores">procesadores</option>
+                        <option value="gráficas">gráficas</option>
+                        <option value="perifericos">periféricos</option>
+                    </select>
                 </div>
                 <div class="position-user col-2">
                     <button class="carrito-ver estilo-btn"><i class="fa-solid fa-basket-shopping fa-xl"></i></button>
@@ -81,64 +77,30 @@
         <!-- cierre barra nav -->
     </header>
     <!-- cierre header -->
-    <main class="background-contacto">
-        <div class="row align-box d-flex justify-content-evenly flex-wrap m-2">
-            <span class=" d-flex col-12">
-                <h1>medios de atención</h1>
-            </span>
-            <div class="aling-contacto col-sm-12 col-md-4 col-lg-3">
-                <h2>Nuestras redes</h2>
-                <div>
-                    <section>
-                        <a href="https://www.instagram.com"><i class="redes fa-brands fa-square-instagram"></i></a>
-                        <p>gaming.storeOK</p>
-                    </section>
-                    <div class="line"></div>
-                    <section>
-                        <a href="https://twitter.com"><i class="redes fa-brands fa-square-x-twitter"></i></a>
-                        <p>gaming.storeARG</p>
-                    </section>
-                    <div class="line"></div>
-                    <section>
-                        <a href="https://www.facebook.com"><i class="redes fa-brands fa-square-facebook"></i></a>
-                        <p>Gaming Store</p>
-                    </section>
-                    <div class="line"></div>
-                    <section>
-                        <a href="https://www.youtube.com"><i class="redes fa-brands fa-square-youtube"></i></a>
-                        <p>Gaming_StoreYT</p>
-                    </section>
+    <main>
+        <h1 class="subtitulo">Carrito</h1>
+        <div class="contentcarrito container-fluid d-flex flex-column">
+            <p id="carrito-vacio" class="carrito-vacio">El carrito esta vacio.</p>
+            <div id="articulos-carrito" class="articulos-carrito">
+
+                <!-- SE RELLENA CON JAVASCRIPT -->
+
+            </div>
+
+            <div id="carrito-interacciones" class="carrito-interacciones ">
+                <div class="interaccion-volver">
+                    <button id="vaciar-carrito" class="vaciar-carrito estilo">Vaciar carrito</button>
+                </div>
+                <div class="interaccion-derecha">
+                    <div class="interaccion-comprar">
+                        <p>Total:</p>
+                        <p id="total">$1000</p>
+                    </div>
+                    <button id="carrito-comprar" class="carrito-comprar estilo">Pagar ahora</button>
                 </div>
             </div>
-            <div class="aling-contacto col-sm-12 col-md-4 col-lg-3">
-                <h2>Otros medios de contacto</h2>
-                <div>
-                    <section class="telefono">
-                        <i class="fa-brands fa-square-whatsapp"></i>
-                        <p>+54 9 2994932791</p>
-                    </section>
-                    <div class="line"></div>
-                    <section class="telefono">
-                        <i class="fa-solid fa-square-phone"></i>
-                        <p>+54 9 2995933513</p>
-                    </section>
-                    <div class="line"></div>
-                    <section class="telefono">
-                        <i class="fa-solid fa-square-envelope"></i>
-                        <a href="mailto:gaming.store-contacto@gmail.com.ar">gaming.store@gmail.com.ar</a>
-                    </section>
-                </div>
-            </div>
-            <div class="aling-contacto map col-sm-12 col-md-6 col-lg-3">
-                <h2>Donde nos ubicamos</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.6951578811768!2d-68.05928679643145!3d-38.951839636001836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33d1ce331387%3A0x1e229e83887cc25f!2sMunicipalidad%20de%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1692583614668!5m2!1ses-419!2sar"
-                    style="border:  2px gray; border-radius: 10px; box-shadow: 0 2px 5px black; display: flex;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <p id="carrito-comprado" class="carrito-comprado">Muchas gracias por su compra!</p>
         </div>
-
-
     </main>
     <footer class="container-fluid">
         <!-- apertura de footer -->
@@ -179,6 +141,17 @@
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
         crossorigin="anonymous"></script>
     <!-- Bootstrap scrips -->
+
+    <!-- Libreria Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Libreria Toastify -->
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SweetAlert -->
+
+    <!-- Enlace JS -->
+    <script src="../JavaScript/carrito.js"></script>
 </body>
 
 </html>

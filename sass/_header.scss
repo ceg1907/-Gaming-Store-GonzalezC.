@@ -116,39 +116,48 @@ header {
         .position-user {
             display: flex;
             justify-content: center;
-            .fa-xl {
-                color: $font-color1;
-                font-size: 15px;
+            .estilo-btn{
+                height: 25px;
+                width: 25px;
+                margin: 2PX;
+                line-height: 17PX;
+                background-color: $color4;
+                border: 2px solid $color5;
+                box-shadow: $box-shadows1;
+                border-radius: 5px;
                 text-align: center;
-                line-height: 20PX;
-                height: 20px;
-                width: 20px;
-                margin: 5PX;
-                transition: $transicion1;
                 @include tablet{
-                    font-size: 20px;
                     height: 30px;
                     width: 30px;
+                    line-height: 20px;
+                }
+                @include pc{
+                    height: 35px;
+                    width: 35px;
                     line-height: 30px;
                 }
+            }
+            i.fa-xl {
+                color: $font-color1;
+                font-size: 13px;
+                transition: $transicion1;
+                @include tablet{
+                    font-size: 15px;
+                }
                 @include pc{
-                    font-size: 25px;
-                    height: 40px;
-                    width: 40px;
-                    line-height: 40px;
+                    font-size: 20px;
                 }
             }
-            .fa-xl:hover {
-                box-shadow: $box-shadows;
-                border-radius: 5px;
+            .estilo-btn:hover {
+                box-shadow: $box-shadows2;
                 background-color: $color2;
                 cursor: pointer;
-                @include pc{
-                    border-radius: 10px;
-                    }
+                }
+            .estilo-btn:active {
+                scale: 0.9;
                 }
             }
-            .fa-xl:active {
+            i.fa-xl:active {
                 color: $font-color2;
             }
         }

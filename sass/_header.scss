@@ -52,20 +52,21 @@ header {
                 border-style: solid;
                 border-color: $color3;
                 text-indent: 30px;
-                text-transform: capitalize;
+                // text-transform: capitalize;
                 font-family: $font1;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
-                font-size: 15px;
+                font-size: 12px;
                 background: $color8 url(../multimedia/icons//buscador.png) no-repeat 5px center;
                 outline: none;
                 transition: $transicion4;
                 @include tablet{
                     width: 200px;
                     height: 35px;
+                    font-size: 14px;
                 }
                 @include pc{
-                    font-size: 20px;
+                    font-size: 15px;
                     width: 260px;
                     height: 35px;
                 }

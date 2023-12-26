@@ -31,25 +31,50 @@
 
 let listaArticulos = [];
 
-fetch("../JavaScript/articulos.json")
+let rutaDeAcceso = "../JavaScript/articulos.json"
+
+fetch(rutaDeAcceso)
     .then(response => response.json())
     .then(data => {
         listaArticulos = data;
         CargarProductos(listaArticulos);
     })
-fetch("../JavaScript/articulos.json")
+fetch(rutaDeAcceso)
     .then(response => response.json())
     .then(data => {
         listaArticulos = data;
         CargarProductosIndex1(listaArticulos);
     })
 
+    fetch(rutaDeAcceso)
+    .then(response => response.json())
+    .then(data => {
+        listaArticulos = data;
+        window.addEventListener("keydown", (event)=>{
+            if(event.key==="Enter")
+            buscarProductos(listaArticulos)
+        })
+    
+    })
+
 
 
 const contenedorCards = document.querySelector("#contenedor-cards");
+
+
 const contenedorCardsIndex1 = document.querySelector(".product1");
 const contenedorCardsIndex2 = document.querySelector(".product2");
+
+
 let botonesAgregar = document.querySelectorAll(".carrito-agregar");
+
+// VARIABLES DEL BUSCADOR
+let cleaner = document.querySelector("#cleaner");
+
+const contenedorBuscador = document.createElement ("div")
+contenedorBuscador.classList.add("row", "justify-content-center", "container-fluid", "m-0","contenedor-buscador" )
+
+const boxBuscador = document.querySelector(".contenedor-buscador");
 
 
 
@@ -130,6 +155,72 @@ function CargarProductosIndex1(){
 };
 
 
+function buscarProductos(){
+
+    let buscadorInput= document.getElementById("buscadorInput").value;
+    let elementoBuscado = buscadorInput.toLowerCase().trim();
+    let resultadoBusqueda = listaArticulos.filter(articulo => articulo.nombre.toLowerCase().includes(elementoBuscado));
+
+    if(resultadoBusqueda.length > 0){
+        cleaner.innerHTML= "";
+
+        const boxItemBuscado = document.createElement ("div");
+        boxItemBuscado.classList.add("position-article", "d-flex", "justify-content-evenly", "col-sm-12", "col-lg-10");
+        ContenedorProductosBuscados()
+
+        resultadoBusqueda.forEach( (articulo) => {
+            const boxCard = document.createElement ("div");
+            boxCard.classList.add("card", "align-product");
+
+            boxCard.innerHTML = `
+                <div class="c-b">
+                    <img class="card-img-top img-home" src=".${articulo.imagen}" alt="${articulo.nombre}" />
+                </div>
+                <div class="card-body d-flex">
+                    <p class="nombre-item">${articulo.nombre}</p>
+                    <div class="precio d-flex">
+                        <p class="monto-item">${articulo.precio}</p>
+                        <button class="carrito-agregar" id="${articulo.id}">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+            boxItemBuscado.append(boxCard)
+        });
+        contenedorBuscador.append(boxItemBuscado)
+        cleaner.append(contenedorBuscador)
+    };
+    CargarBtnAgregar()
+};
+
+function ContenedorProductosBuscados(){
+    contenedorBuscador.innerHTML= `
+    <div class="bg-top">
+        <span class="h-productos">
+            <h1>Resultados busqueda</h1>
+        </span>
+        <div class="filtrado d-flex justify-content-between align-items-center col-12">
+            <form>
+                <select class="filtrado-categorias" name="categorias">
+                    <option value="todas las categorias">Todas las categorías</option>
+                    <option value="procesadores">procesadores</option>
+                    <option value="gráficas">gráficas</option>
+                    <option value="perifericos">periféricos</option>
+                </select>
+            </form>
+            <div>
+                <i class="alineacion-list fa-solid fa-grip fa-xl"></i>
+                <i class="alineacion-list fa-solid fa-list fa-xl"></i>
+            </div>
+        </div>
+    </div>
+    `;
+    cleaner.append(contenedorBuscador)
+    
+}
+
+
 
 
 
@@ -193,34 +284,9 @@ function agregarAlCarrito (e){
         }
     }
 
-
     localStorage.setItem("articulos-en-carrito", JSON.stringify(CarritoArmado))
 
 }
-
-
-
-
-
-
-
-
-
-// function sumarCantidad(){
-
-//     cantidadDeArticulos = cantidadDeArticulos + 1;
-//     document.querySelectorAll(".carrito-item-cantidad").innerHTML = cantidadDeArticulos
-// }
-// function restarCantidad(){
-//     cantidadDeArticulos = cantidadDeArticulos - 1;
-//     document.getElementsByClassName("carrito-item-cantidad").innerHTML = cantidadDeArticulos
-// }
-// let bntSumar = document.getElementsByClassName("sumar-item");
-// bntSumar.addEventListener("click", sumarCantidad);
-
-// let bntRestar = document.getElementsByClassName("restar-item")
-// bntRestar.addEventListener("click", restarCantidad);
-
 
 
 
